@@ -285,7 +285,12 @@ export default function Hero() {
               Explore Case Studies
             </motion.button>
           </Link>
-          <a href="/resume.pdf" download className={styles.resumeLink}>
+          <a
+            href="https://drive.google.com/uc?export=download&id=1iY6u8xc8DyNjHqBbOs9LQdaWgHvWwCUq"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.resumeLink}
+          >
             <motion.button
               className={styles.secondaryBtn}
               whileHover={{ scale: 1.04 }}

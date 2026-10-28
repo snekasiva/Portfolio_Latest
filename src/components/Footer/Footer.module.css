@@ -1,0 +1,26 @@
+.footer {
+  padding: 40px 0;
+  background: var(--bg-primary);
+  border-top: 1px solid var(--border-color);
+}
+
+.content {
+  text-align: center;
+}
+
+.text {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin-bottom: 0.3rem;
+}
+
+.name {
+  color: var(--accent-blue);
+  font-weight: 600;
+}
+
+.year {
+  font-size: 0.8rem;
+  color: var(--text-muted);
+  opacity: 0.6;
+}

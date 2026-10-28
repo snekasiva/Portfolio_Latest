@@ -1,0 +1,57 @@
+.marq {
+  border-top: 1px solid var(--border-color);
+  border-bottom: 1px solid var(--border-color);
+  background: #080a0f;
+  padding: 18px 0;
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+}
+
+.marqIn {
+  display: flex;
+  width: max-content;
+  animation: marqueeLoop 25s linear infinite;
+  will-change: transform;
+}
+
+.marq:hover .marqIn {
+  animation-play-state: paused;
+}
+
+.marqItem {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  padding: 0 28px;
+  white-space: nowrap;
+}
+
+.marqText {
+  font-family: var(--font-heading);
+  font-size: 11px;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--text-secondary);
+  transition: color 0.3s ease;
+}
+
+.marqItem:hover .marqText {
+  color: #00CD58;
+}
+
+.marqDot {
+  color: #00CD58;
+  font-size: 9px;
+  filter: drop-shadow(0 0 6px rgba(0, 205, 88, 0.6));
+}
+
+@keyframes marqueeLoop {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-33.333%);
+  }
+}

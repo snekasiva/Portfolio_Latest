@@ -1,0 +1,254 @@
+.experience {
+  padding: 100px 0;
+  position: relative;
+  background-color: var(--bg-secondary);
+}
+
+.timeline {
+  position: relative;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.timelineLine {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 28px;
+  width: 3px;
+  background: linear-gradient(180deg, #667eea 0%, #a855f7 50%, #ec4899 100%);
+  border-radius: 2px;
+  opacity: 0.5;
+}
+
+.timelineItem {
+  position: relative;
+  margin-bottom: 48px;
+  padding-left: 70px;
+}
+
+.timelineItem:last-child {
+  margin-bottom: 0;
+}
+
+.timelineNode {
+  position: absolute;
+  left: 17px;
+  top: 24px;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: var(--bg-primary);
+  border: 3px solid var(--accent-purple);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 16px rgba(168, 85, 247, 0.4);
+  z-index: 2;
+  transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.timelineItem:hover .timelineNode {
+  transform: scale(1.3);
+  border-color: #ec4899;
+  box-shadow: 0 0 24px rgba(236, 72, 153, 0.5);
+}
+
+.nodeInner {
+  width: 9px;
+  height: 9px;
+  border-radius: 50%;
+  background: var(--accent-gradient);
+}
+
+.card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: var(--shadow-md);
+  transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  position: relative;
+  overflow: hidden;
+}
+
+.card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: var(--accent-gradient);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--border-glow);
+}
+
+.card:hover::before {
+  opacity: 1;
+}
+
+.cardHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.highlightsBar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 18px;
+}
+
+.hlBadge {
+  font-size: 0.78rem;
+  font-weight: 600;
+  color: var(--accent-purple);
+  background: var(--accent-gradient-subtle, rgba(99, 102, 241, 0.12));
+  border: 1px solid var(--border-hover, rgba(139, 92, 246, 0.3));
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.role {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: var(--text-primary);
+  margin-bottom: 4px;
+}
+
+.company {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--accent-purple);
+}
+
+.dot {
+  color: var(--text-muted);
+}
+
+.location {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 400;
+}
+
+.meta {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.period {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: var(--glass-bg);
+  padding: 4px 12px;
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+}
+
+.badge {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  color: #ec4899;
+  background: rgba(236, 72, 153, 0.12);
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.descriptionList {
+  list-style: none;
+  margin-bottom: 24px;
+}
+
+.descriptionItem {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 10px;
+}
+
+.descriptionItem:last-child {
+  margin-bottom: 0;
+}
+
+.descriptionItem::before {
+  content: '▹';
+  position: absolute;
+  left: 0;
+  top: 0;
+  color: var(--accent-purple);
+  font-weight: bold;
+}
+
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid var(--border-color);
+}
+
+.skillPill {
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: var(--text-secondary);
+  background: var(--glass-bg);
+  padding: 4px 12px;
+  border-radius: 6px;
+  border: 1px solid var(--glass-border);
+  transition: all 0.3s ease;
+}
+
+.skillPill:hover {
+  color: var(--accent-purple);
+  border-color: var(--accent-purple);
+  transform: translateY(-2px);
+}
+
+@media (max-width: 768px) {
+  .timelineLine {
+    left: 18px;
+  }
+
+  .timelineNode {
+    left: 7px;
+    width: 23px;
+    height: 23px;
+  }
+
+  .timelineItem {
+    padding-left: 48px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .role {
+    font-size: 1.2rem;
+  }
+
+  .cardHeader {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
